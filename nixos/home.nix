@@ -10,6 +10,9 @@
       name = "Vincent Brodin";
       email = "vincent.brodin21@gmail.com";
     };
+    extraConfig = {
+      credential.helper = "${pkgs.git.override { withLibsecret = true; }}/bin/git-credential-libsecret";
+    };
   };
   programs.waybar.enable = true;
   programs.zoxide = {
@@ -20,6 +23,8 @@
   home.packages = with pkgs; [
     # HELIX
     helix
+    wl-clipboard
+    # NIX
     nil
     nixfmt-rfc-style
     # RUST
@@ -27,11 +32,14 @@
     cargo
     rustfmt
     rust-analyzer
+    # MARKDOWN
+    markdown-oxide
     # DEV
     pkg-config
     openssl
     gcc
     gh
+    zoxide
     #FONTS
     nerd-fonts.fira-mono
     nerd-fonts.fira-code
@@ -39,9 +47,9 @@
     rofi
     rose-pine-hyprcursor
     hyprpaper
-    zoxide
-    wl-clipboard
     fastfetch
+    libsecret
+    killall
   ];
 
   fonts = {
