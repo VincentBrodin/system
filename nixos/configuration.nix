@@ -55,6 +55,10 @@
     LC_TIME = "sv_SE.UTF-8";
   };
 
+  # Bluetooth
+  hardware.bluetooth.enable = true;
+  services.blueman.enable = true;
+
   # Docker
   virtualisation.docker = {
     enable = true;
@@ -86,11 +90,11 @@
     enable = true;
     autosuggestions.enable = true;
     syntaxHighlighting.enable = true;
-    ohMyZsh = {
-      enable = true;
-      theme = "fishy";
-      plugins = [ "git" ];
-    };
+    # ohMyZsh = {
+    #   enable = true;
+    #   theme= "fishy";
+    #   plugins = [ "git" ];
+    # };
 
     shellAliases = {
       sysswitch = "sudo nixos-rebuild switch --flake ~/system/#orion";

@@ -48,6 +48,9 @@
     btop
     killall
     zip
+    unzip
+    gnome-bluetooth
+    pavucontrol
   ];
 
   fonts = {
@@ -56,8 +59,8 @@
 
   home.file = {
   };
-  home.sessionVariables = {
 
+  home.sessionVariables = {
   };
 
   programs.home-manager.enable = true;
