@@ -39,6 +39,7 @@
     nerd-fonts.fira-mono
     nerd-fonts.fira-code
     nerd-fonts.jetbrains-mono
+    nerd-fonts.monaspace
     #MISC
     rofi
     rose-pine-hyprcursor
@@ -51,6 +52,7 @@
     unzip
     gnome-bluetooth
     pavucontrol
+    rclone
   ];
 
   fonts = {
